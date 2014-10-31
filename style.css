@@ -1,0 +1,62 @@
+body, html, #content {
+	height:100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.logo {
+	font-family: "Verdana";
+	font-size: 20px;
+	position: absolute;
+	margin: 0; 
+	padding: 0;
+	left: 5px;
+	top: 5px;
+}
+
+.instructions {
+	font-family: "Verdana";
+	position: absolute;
+	left: 5px;
+	top: 35px;
+	font-size: 9px;
+	width: 60px;
+	display:block;
+}
+
+.circleEditor {
+	height:100%;
+	position: relative;
+}
+
+.circleDiagram {
+	border: solid;
+	position: absolute;
+}
+
+.circleDiagram canvas {
+	position: absolute;
+}
+
+.editBox {
+	margin: 2px;
+	position: absolute;
+}
+
+.editBox input {
+    border-color: black;
+    border-style: none none dotted;
+    border-width: medium medium 1px;
+	background-color: transparent;
+	border-radius: 0px;
+	padding: 0;
+	margin: 0;
+}
+
+.editBox label {
+    font-family: Arial;
+    font-size: 14px;
+	display: block;
+	margin-right: 5px;
+}

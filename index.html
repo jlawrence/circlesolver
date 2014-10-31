@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Circle Solver</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1"/>	
+		<link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="third-party/react.js"></script>
+        <script src="Utils.js"></script>
+        <script src="Styles.js"></script>
+
+		
+        <script src="elements/Logo.js"></script>
+        <script src="elements/EditBox.js"></script>
+        <script src="elements/CircleDiagram.js"></script>
+        <script src="elements/CircleEditor.js"></script>
+    </head>
+    <body>
+        <script>
+			React.render(
+				Div({id: "content"},
+					Logo(),
+					Small({className: "instructions"}, "Type a value in any blank and then click outside to update calculations."),
+					CircleEditor()
+				),
+				document.body
+			);
+        </script>
+    </body>
+</html>
