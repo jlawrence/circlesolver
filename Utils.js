@@ -24,7 +24,7 @@ var Utils = {
 	convertFactory: function(reactFactory) {
 		return function(maybeOptions) {
 			// An options object was explicitly passed.
-			if (maybeOptions !== undefined && !React.isValidElement(maybeOptions) && typeof (maybeOptions) !== "string") {
+			if (maybeOptions !== undefined && !React.isValidElement(maybeOptions) && typeof (maybeOptions) !== "string" && !Utils.isArray(maybeOptions)) {
 				return reactFactory.apply(null, arguments);
 			} else {
 				return reactFactory.apply(null, [null].concat(arguments));
@@ -57,7 +57,11 @@ var Utils = {
 	 */
 	capitalize: function(str) {
 		return str.charAt(0).toUpperCase() + str.slice(1);
-	}
+	},
+	
+	isArray: function( obj ) {
+	    return toString.call(obj) === "[object Array]";
+	},
 };
 
 // Add all standard element factories in React.DOM to the window to provide a nicer syntax for using standard DOM elements.
