@@ -113,7 +113,9 @@ var CircleEditor = Utils.createFactory({
 		
 		Object.keys(this._FORMULAS_FROM_RADIUS).forEach(function(key){
 			if (key !== sourceKey) {
-				this.refs[key].setValue(this._FORMULAS_FROM_RADIUS[key](radius).toString());
+				var number = this._FORMULAS_FROM_RADIUS[key](radius);
+				var textValue = isNaN(number) ? '' : number.toString();
+				this.refs[key].setValue(textValue);
 			}
 		}, this);
 	}
